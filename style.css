@@ -1,0 +1,126 @@
+/* Переменные цветов для удобства */
+:root {
+    --bg-color: #f4f1e1;    /* Светло-бежевый фон как в Canva */
+    --main-brown: #5d4037;  /* Темно-коричневый для заголовков */
+    --gold: #c5a059;        /* Золотистый акцент */
+    --text-color: #2c2c2c;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Georgia', serif; /* Более "исторический" шрифт */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--main-brown);
+    margin: 0;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.divider {
+    width: 150px;
+    height: 4px;
+    background-color: var(--gold);
+    margin: 20px auto;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--main-brown);
+}
+
+section, .info-box {
+    background-color: var(--white);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: var(--main-brown);
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.merits ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.merits li {
+    padding: 10px 0;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.merits li::before {
+    content: "◈";
+    color: var(--gold);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--main-brown);
+    color: var(--white);
+    padding: 40px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.sources-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    opacity: 0.8;
+}
+
+.thanks {
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Адаптация для мобильных телефонов */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+}
